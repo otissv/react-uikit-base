@@ -1,5 +1,9 @@
 {
-  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
 
   "env": {
     "browser": true,
@@ -16,10 +20,14 @@
   },
 
   "plugins": [
+    "react",
     "smells"
   ],
 
-  "extends": "standard",
+  "extends": [
+    "standard",
+    "plugin:react/recommended"
+  ],
 
   "rules": {
     "key-spacing": 0,
